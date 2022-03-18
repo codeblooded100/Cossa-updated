@@ -1,0 +1,304 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Home :: C.O.S.S.A</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="shortcut icon" href="images/fav-icon.png" />
+    <!-- Custom Theme files -->
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!---- start-smoth-scrolling---->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    
+    <!----webfonts--->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!----start-top-nav-script---->
+    <script>
+        $(function() {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function() {
+                var w = $(window).width();
+                if (w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <!----//End-top-nav-script---->
+</head>
+</head>
+
+<body>
+    <!----- start-header---->
+    <div id="home" class="header">
+        <div class="top-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" title="yellow" /></a>
+                </div>
+                <!----start-top-nav---->
+                <nav class="top-nav">
+                    <ul class="top-nav">
+
+                        <li class="active"><a href="index.html">Home </a></li>
+                        <li><a href="About Us.html">About</a></li>
+                        <li><a href="News.html">News</a></li>
+                        <li><a href="Academics.html">Academics</a></li>
+                        <li><a href="Our Executives.html">Our Executives</a></li>
+                        <li><a href="Social.html">Contact</a></li>
+                    </ul>
+                    <a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+                </nav>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!----- //End-header---->
+    <!---banner---->
+
+
+    <script>
+        var responsiveSlider = function() {
+
+            var slider = document.getElementById("slider");
+            var sliderWidth = slider.offsetWidth;
+            var slideList = document.getElementById("slideWrap");
+            var count = 1;
+            var items = slideList.querySelectorAll("li").length;
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+
+            window.addEventListener('resize', function() {
+                sliderWidth = slider.offsetWidth;
+            });
+
+            var prevSlide = function() {
+                if (count > 1) {
+                    count = count - 2;
+                    slideList.style.left = "-" + count * sliderWidth + "px";
+                    count++;
+                } else if (count = 1) {
+                    count = items - 1;
+                    slideList.style.left = "-" + count * sliderWidth + "px";
+                    count++;
+                }
+            };
+
+            var nextSlide = function() {
+                if (count < items) {
+                    slideList.style.left = "-" + count * sliderWidth + "px";
+                    count++;
+                } else if (count = items) {
+                    slideList.style.left = "0px";
+                    count = 1;
+                }
+            };
+
+            next.addEventListener("click", function() {
+                nextSlide();
+            });
+
+            prev.addEventListener("click", function() {
+                prevSlide();
+            });
+
+            setInterval(function() {
+                nextSlide()
+            }, 5000);
+
+        };
+
+        window.onload = function() {
+            responsiveSlider();
+        }
+    </script>
+<!--
+    <div class=" banner text-center " id=" slider ">
+        <h1><span>THE OFFICIAL WEBSITE OF</span><br /><label>COLLEGE OF SCIENCE STUDENTS ASSOCIATION ABUAD CHAPTER</label></h1>
+        
+    </div>
+
+-->
+
+<div id="owl-demo" class="owl-carousel" style="width: 100%; height: 50%; ">
+    <div class="item">
+        <img class="lazyOwl" data-src="images/12.  A section of the Physics Lab Store_595.jpg" alt="screen-name">
+    </div>
+    <div class="item">
+        <img class="lazyOwl" data-src="images/2. A section of Biology Lab_595.jpg" alt="screen-name">
+    </div>
+    <div class="item">
+        <img class="lazyOwl" data-src="images/6th Convocation Ceremony, Afe Babalola University Ado-Ekiti, Ekiti State, Nigeria_03_595.jpg" alt="screen-name">
+    </div>
+</div>
+
+    <!---//banner---->
+    <div class="clearfix "> </div>
+    <!---welcome-note--->
+    <div class="welcome-note text-center ">
+        <div class="container ">
+            <br>
+            <br>
+            <h2>You Are Welcome To The Official Website Of College Of Science Students Association Afe Babalola University Ado-Ekiti.</h2>
+           <p>Research and Develpoment of Science.</p>
+            <ul class="note-btns unstyled-list list-inline ">
+                
+                
+                <div class="clearfix "> </div>
+            </ul>
+        </div>
+    </div>
+    <!--//welcome-note--->
+    <!---row1---->
+    <div class="row1 ">
+        <div class="container ">
+            <div class="col-md-6 row1-col1 ">
+                <div class="col-md-3 col-icon ">
+                    <span class="jet "> </span>
+                </div>
+                <div class="col-md-9 col-info ">
+                    <h3>MISSION</h3>
+                    <span>What Is Our Mission?</span>
+                    <p style="font-size: 33px;">To Improve Sportsmanship in the college and To promote unity </p>
+                
+                </div>
+               <div class="border-r "  style="margin:10% auto ;"> </div>
+            </div>
+            <div class="col-md-6 row1-col2 ">
+                <div class="col-md-3 col-icon ">
+                    <span class="spe "> </span>
+                </div>
+                <div class="col-md-9 col-info ">
+                    <h3>VISION</h3>
+                    <span>What Is Our Vision?</span>
+                     <p style="font-size: 33px;">The Vision is to Raise World Class Leaders </p>
+                
+                </div>
+            </div>
+            <div class="clearfix "> </div>
+        </div>
+    </div>
+    <!---row1---->
+    <!---row2---->
+    <div class="row2 ">
+        <div class="container " class="row2-cols ">
+            <div class="col-md-4 row2-col-divice ">
+                <img src="images/row2-divices.png " title="name " />
+            </div>
+            <div class="col-md-8 row2-col-info ">
+                <h3>About COSSA</h3>
+                <span>College Of Science Student Association.</span>
+                <p>The College of Sciences is one of the five pioneer Colleges at Afe Babalola University Ado Ekiti. It took off at the inception of academic work in January, 2010. The college has the colour 'Yellow' as the college colour.</p>
+                <a class="r2-btn " href="https://www.abuad.edu.ng/collge-of-sciences-overview/">More</a>
+            </div>
+            <div class="clearfix "> </div>
+        </div>
+        
+    </div>
+    </div>
+    <!---row2---->
+    <!---row3---->
+    <div class="row3 ">
+        <div class="container ">
+            <div class="row3-head text-center ">
+                <h4></h4>
+                    <span></span>
+                    <p> </p>
+            </div>
+            <!----sreen-gallery-cursual---->
+            <div class="sreen-gallery-cursual ">
+                <!-- requried-jsfiles-for owl -->
+                <link href="css/owl.carousel.css " rel="stylesheet ">
+                <script src="js/owl.carousel.js "></script>
+                <script>
+                    $(document).ready(function() {
+                        $("#owl-demo ").owlCarousel({
+                            items: 1,
+                            lazyLoad: true,
+                            autoPlay: true,
+                            navigation: true,
+                            navigationText: false,
+                            pagination: false,
+                        });
+                    });
+                </script>
+                <!-- //requried-jsfiles-for owl -->
+                <!-- start content_slider -->
+                <div id="owl-demo" class="owl-carousel">
+                    <div class="item">
+                        <img class="lazyOwl" data-src="images/12.  A section of the Physics Lab Store_595.jpg" alt="screen-name">
+                    </div>
+                    <div class="item">
+                        <img class="lazyOwl" data-src="images/2. A section of Biology Lab_595.jpg" alt="screen-name">
+                    </div>
+                    <div class="item">
+                        <img class="lazyOwl" data-src="images/6th Convocation Ceremony, Afe Babalola University Ado-Ekiti, Ekiti State, Nigeria_03_595.jpg" alt="screen-name">
+                    </div>
+                </div>
+                <!--//sreen-gallery-cursual---->
+            </div>
+        </div>
+    </div>
+    <!---row3---->
+    <!---copy-right--->
+    <div class="copy-right text-center ">
+        <p>POWERED BY : <a href="#">CODE BLOODED</a></p>
+        <script type="text/javascript ">
+            $(document).ready(function() {
+                /*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+
+                $().UItoTop({
+                    easingType: 'easeOutQuart'
+                });
+
+            });
+        </script>
+        <a href="# " id="toTop " style="display: block; "> <span id="toTopHover " style="opacity: 1; "> </span></a>
+    </div>
+    <!---//copy-right--->
+</body>
+
+</html>
